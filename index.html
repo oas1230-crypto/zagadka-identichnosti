@@ -13,8 +13,6 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/hero-lake.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
-  <script src="site-config.js" defer></script>
-  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержанию</a>
@@ -28,20 +26,19 @@
     <symbol id="i-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M24 12v13l9 5M24 5v4m0 30v4M5 24h4m30 0h4"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24"><path d="m7 3 3 5-3 3c2 3 3 4 6 6l3-3 5 3c-1 8-9 4-14-1S-2 4 7 3Z"/></symbol>
     <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
-    <symbol id="i-telegram" viewBox="0 0 24 24"><path d="m2 10 20-7-4 18-7-6-4 3 1-6 10-6-7 9M2 10l6 2"/></symbol>
     <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3V9Z"/></symbol>
   </defs></svg>
 
+  <main id="main">
   <div class="hero" id="top">
     <div class="hero-scenery" aria-hidden="true"></div>
-    <header class="site-header wrap">
+    <header class="site-header wrap" role="banner">
       <a class="brand" href="#top">Загадка идентичности</a>
       <nav aria-label="Основная навигация">
         <a href="#about">О шаттле</a><a href="#speakers">Ведущие</a><a href="#place">Место проведения</a><a href="#contacts">Контакты</a>
       </nav>
       <a class="button header-button" href="#contacts">Узнать об участии</a>
     </header>
-    <main id="main">
       <section class="hero-content wrap" aria-labelledby="page-title">
         <p class="eyebrow">Психологический<br>выездной шаттл</p>
         <h1 id="page-title">Загадка<br>идентичности</h1>
@@ -52,7 +49,6 @@
         </div>
         <a class="button hero-button" href="#contacts">Узнать об участии <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </section>
-    </main>
   </div>
 
   <div class="page-content">
@@ -60,7 +56,7 @@
       <div class="wrap split-layout">
         <div class="section-copy">
           <h2 id="about-title">О чём этот шаттл</h2>
-          <p>Это пространство, где можно остановиться, выдохнуть и внимательнее посмотреть на себя. Мы будем исследовать свою идентичность: как мы понимаем себя, чего хотим, какие выборы делаем, что нас поддерживает, а что мешает.</p>
+          <p>Это пространство, где можно остановиться, выдохнуть и внимательнее посмотреть на себя. Мы будем исследовать свою идентичность, свой образ себя — Я-концепцию: чего мы хотим, какие выборы делаем, что поддерживает нашу самооценку и чувство целостности, а что мешает.</p>
           <p>Через встречи, обсуждения, практические упражнения и личную рефлексию мы будем искать ответы на важные вопросы и опираться на свой живой опыт.</p>
         </div>
         <div class="photo-with-note">
@@ -107,7 +103,7 @@
             <div class="speaker-copy">
               <h3>Валерия Погоская</h3>
               <p class="speaker-role">Врач-психотерапевт,<br>психиатр-нарколог высшей категории</p>
-              <p>Многолетний опыт клинической, реабилитационной и групповой работы. Внимание к человеку, его жизненному опыту и поиску внутренних ресурсов.</p>
+              <p>Специалист с многолетним опытом клинической, реабилитационной и групповой работы.</p>
               <details>
                 <summary>Профессиональный путь</summary>
                 <div class="speaker-details">
@@ -124,8 +120,8 @@
               <h3>Глеб Нюхалов</h3>
               <p class="speaker-role">Врач-психотерапевт высшей категории, психиатр</p>
               <p>Супервизор экзистенциального направления. Член Восточно-европейской ассоциации экзистенциальной терапии. Руководитель центра психологического консультирования «Онтология».</p>
-              <details><summary>О профессиональной работе</summary><div class="speaker-details"><p>Преподаёт на программах подготовки психологов и психотерапевтов. В работе обращается к вопросам личности, жизненных выборов и отношений.</p><a href="https://psy.education/gleb-nyukhalov/" target="_blank" rel="noopener noreferrer">Профиль на psy.education<span class="sr-only"> (откроется в новой вкладке)</span></a></div></details>
-              <a class="interview-link" href="https://www.youtube.com/watch?v=f57fkEalSao" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg><span>Смотреть интервью на YouTube<span class="sr-only"> (откроется в новой вкладке)</span></span></a>
+              <details><summary>О профессиональной работе</summary><div class="speaker-details"><p>Преподаёт на программах подготовки психологов и психотерапевтов.</p><a href="https://psy.education/gleb-nyukhalov/" target="_blank" rel="noopener noreferrer">Профиль на psy.education<span class="sr-only"> (откроется в новой вкладке)</span></a></div></details>
+              <a class="interview-link" href="https://www.youtube.com/watch?v=f57fkEalSao" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg><span>Интервью с Глебом Нюхаловым<span class="sr-only"> на YouTube (откроется в новой вкладке)</span></span></a>
               <p class="interview-caption">«Ничего лишнего», 4 августа 2021</p>
             </div>
           </article>
@@ -140,6 +136,7 @@
       </div>
     </section>
   </div>
+  </main>
 
   <footer id="contacts" class="contacts" aria-labelledby="contacts-title">
     <div class="wrap contact-layout">
@@ -147,7 +144,6 @@
       <div class="contact-actions">
         <div class="contact-links">
           <a class="phone-link" href="tel:+375296365143"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>+375 29 636 5143</span></a>
-          <a id="telegram-link" hidden><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg><span>Telegram</span></a>
           <a href="https://www.instagram.com/pogoskaia/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg><span>Instagram<span class="sr-only"> (откроется в новой вкладке)</span></span></a>
         </div>
         <p class="contact-note">Предварительное знакомство — обязательный этап.</p>
