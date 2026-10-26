@@ -1,0 +1,10 @@
+{
+  "name": "zagadka-identichnosti",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лендинг психологического выездного шаттла «Загадка идентичности»",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}
