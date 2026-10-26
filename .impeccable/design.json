@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T22:13:41.602597+00:00",
+  "title": "Design System: Загадка идентичности",
+  "extensions": {
+    "colorMeta": {
+      "milk": {
+        "role": "neutral",
+        "displayName": "Молочный фон",
+        "canonical": "#f5f2ea",
+        "tonalRamp": [
+          "oklch(15% 0.01109 89.72)",
+          "oklch(26% 0.01109 89.72)",
+          "oklch(38% 0.01109 89.72)",
+          "oklch(49% 0.01109 89.72)",
+          "oklch(61% 0.01109 89.72)",
+          "oklch(72% 0.01109 89.72)",
+          "oklch(84% 0.01109 89.72)",
+          "oklch(95% 0.01109 89.72)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Светлая бумага",
+        "canonical": "#fbf9f3",
+        "tonalRamp": [
+          "oklch(15% 0.00821 91.48)",
+          "oklch(26% 0.00821 91.48)",
+          "oklch(38% 0.00821 91.48)",
+          "oklch(49% 0.00821 91.48)",
+          "oklch(61% 0.00821 91.48)",
+          "oklch(72% 0.00821 91.48)",
+          "oklch(84% 0.00821 91.48)",
+          "oklch(95% 0.00821 91.48)"
+        ]
+      },
+      "sage": {
+        "role": "neutral",
+        "displayName": "Серо-зелёная поверхность",
+        "canonical": "#e3e3d7",
+        "tonalRamp": [
+          "oklch(15% 0.01605 106.71)",
+          "oklch(26% 0.01605 106.71)",
+          "oklch(38% 0.01605 106.71)",
+          "oklch(49% 0.01605 106.71)",
+          "oklch(61% 0.01605 106.71)",
+          "oklch(72% 0.01605 106.71)",
+          "oklch(84% 0.01605 106.71)",
+          "oklch(95% 0.01605 106.71)"
+        ]
+      },
+      "forest": {
+        "role": "primary",
+        "displayName": "Лесной зелёный",
+        "canonical": "#26372c",
+        "tonalRamp": [
+          "oklch(15% 0.02966 155.95)",
+          "oklch(26% 0.02966 155.95)",
+          "oklch(38% 0.02966 155.95)",
+          "oklch(49% 0.02966 155.95)",
+          "oklch(61% 0.02966 155.95)",
+          "oklch(72% 0.02966 155.95)",
+          "oklch(84% 0.02966 155.95)",
+          "oklch(95% 0.02966 155.95)"
+        ]
+      },
+      "olive": {
+        "role": "primary",
+        "displayName": "Оливковый акцент",
+        "canonical": "#606b4b",
+        "tonalRamp": [
+          "oklch(15% 0.05011 123.57)",
+          "oklch(26% 0.05011 123.57)",
+          "oklch(38% 0.05011 123.57)",
+          "oklch(49% 0.05011 123.57)",
+          "oklch(61% 0.05011 123.57)",
+          "oklch(72% 0.05011 123.57)",
+          "oklch(84% 0.05011 123.57)",
+          "oklch(95% 0.05011 123.57)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Основной текст",
+        "canonical": "#232720",
+        "tonalRamp": [
+          "oklch(15% 0.01396 131.73)",
+          "oklch(26% 0.01396 131.73)",
+          "oklch(38% 0.01396 131.73)",
+          "oklch(49% 0.01396 131.73)",
+          "oklch(61% 0.01396 131.73)",
+          "oklch(72% 0.01396 131.73)",
+          "oklch(84% 0.01396 131.73)",
+          "oklch(95% 0.01396 131.73)"
+        ]
+      },
+      "brown": {
+        "role": "neutral",
+        "displayName": "Рукописные подписи",
+        "canonical": "#735d49",
+        "tonalRamp": [
+          "oklch(15% 0.04178 63.90)",
+          "oklch(26% 0.04178 63.90)",
+          "oklch(38% 0.04178 63.90)",
+          "oklch(49% 0.04178 63.90)",
+          "oklch(61% 0.04178 63.90)",
+          "oklch(72% 0.04178 63.90)",
+          "oklch(84% 0.04178 63.90)",
+          "oklch(95% 0.04178 63.90)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Текст кнопки",
+        "canonical": "#fff",
+        "tonalRamp": [
+          "oklch(15% 0.00000 89.88)",
+          "oklch(26% 0.00000 89.88)",
+          "oklch(38% 0.00000 89.88)",
+          "oklch(49% 0.00000 89.88)",
+          "oklch(61% 0.00000 89.88)",
+          "oklch(72% 0.00000 89.88)",
+          "oklch(84% 0.00000 89.88)",
+          "oklch(95% 0.00000 89.88)"
+        ]
+      },
+      "button-hover": {
+        "role": "primary",
+        "displayName": "Кнопка при наведении",
+        "canonical": "#4d5a3c",
+        "tonalRamp": [
+          "oklch(15% 0.04949 127.32)",
+          "oklch(26% 0.04949 127.32)",
+          "oklch(38% 0.04949 127.32)",
+          "oklch(49% 0.04949 127.32)",
+          "oklch(61% 0.04949 127.32)",
+          "oklch(72% 0.04949 127.32)",
+          "oklch(84% 0.04949 127.32)",
+          "oklch(95% 0.04949 127.32)"
+        ]
+      },
+      "button-header": {
+        "role": "primary",
+        "displayName": "Верхняя кнопка",
+        "canonical": "#3f4c36",
+        "tonalRamp": [
+          "oklch(15% 0.03947 132.85)",
+          "oklch(26% 0.03947 132.85)",
+          "oklch(38% 0.03947 132.85)",
+          "oklch(49% 0.03947 132.85)",
+          "oklch(61% 0.03947 132.85)",
+          "oklch(72% 0.03947 132.85)",
+          "oklch(84% 0.03947 132.85)",
+          "oklch(95% 0.03947 132.85)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Клавиатурный фокус",
+        "canonical": "#a77c36",
+        "tonalRamp": [
+          "oklch(15% 0.10181 76.90)",
+          "oklch(26% 0.10181 76.90)",
+          "oklch(38% 0.10181 76.90)",
+          "oklch(49% 0.10181 76.90)",
+          "oklch(61% 0.10181 76.90)",
+          "oklch(72% 0.10181 76.90)",
+          "oklch(84% 0.10181 76.90)",
+          "oklch(95% 0.10181 76.90)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Первый экран",
+        "purpose": "Базовый desktop-заголовок; адаптивные значения приведены в DESIGN.md."
+      },
+      "headline": {
+        "displayName": "Заголовки секций",
+        "purpose": "Основная иерархия страницы."
+      },
+      "title": {
+        "displayName": "Заголовки карточек",
+        "purpose": "Краткие преимущества."
+      },
+      "body": {
+        "displayName": "Основной текст",
+        "purpose": "Текст разделов."
+      },
+      "label": {
+        "displayName": "Навигация",
+        "purpose": "Ссылки и верхняя кнопка."
+      },
+      "handwritten": {
+        "displayName": "Рукописная подпись",
+        "purpose": "Локальные шрифты; курсив, наклон и линия под подписью."
+      }
+    },
+    "shadows": [
+      {
+        "name": "navigation-text",
+        "value": "0 1px 8px #162219",
+        "purpose": "Только text-shadow ссылок поверх фотографии; тени карточек отсутствуют."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-hover",
+        "value": "background-color .18s ease",
+        "purpose": "Смена фона ссылки-кнопки."
+      },
+      {
+        "name": "anchor-scroll",
+        "value": "smooth",
+        "purpose": "Прокрутка к секциям; при reduced-motion — auto."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1199px",
+        "query": "(max-width:1199px)"
+      },
+      {
+        "name": "tablet",
+        "value": "899px",
+        "query": "(max-width:899px)"
+      },
+      {
+        "name": "phone",
+        "value": "599px",
+        "query": "(max-width:599px)"
+      },
+      {
+        "name": "narrow-phone",
+        "value": "359px",
+        "query": "(max-width:359px)"
+      },
+      {
+        "name": "wide",
+        "value": "1600px",
+        "query": "(min-width:1600px)"
+      }
+    ],
+    "notes": [
+      "Синтезированные OKLCH tonalRamp предназначены только для панели документации; сайт использует canonical-цвета, новые оттенки в CSS не добавлены.",
+      "Компоненты повторяют существующую реализацию; padding фона предпросмотра навигации служит только для читаемости образца.",
+      "Примитивные токены принадлежат фронтматтеру DESIGN.md; этот sidecar расширяет их по schemaVersion 2."
+    ]
+  },
+  "components": [
+    {
+      "name": "Основная кнопка",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Якорная ссылка к контактам; размеры совпадают с desktop-реализацией.",
+      "html": "<a class=\"ds-button\" href=\"#contacts\">Узнать об участии</a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:52px;padding:14px 30px;border-radius:999px;background:var(--olive,#606b4b);color:#fff;text-decoration:none;font:17px/1.2 var(--sans,Arial,Helvetica,sans-serif);transition:background-color .18s ease;}.ds-button:hover{background:#4d5a3c;}.ds-button:focus-visible{outline:3px solid #a77c36;outline-offset:6px;border-radius:3px;}@media(prefers-reduced-motion:reduce){.ds-button{transition:none;}}"
+    },
+    {
+      "name": "Кнопка в шапке",
+      "kind": "button",
+      "refersTo": "button-header",
+      "description": "Якорная ссылка к контактам; размеры совпадают с desktop-реализацией.",
+      "html": "<a class=\"ds-header-button\" href=\"#contacts\">Узнать об участии</a>",
+      "css": ".ds-header-button{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:52px;padding:14px 30px;border-radius:999px;background:var(--olive,#606b4b);color:#fff;text-decoration:none;font:17px/1.2 var(--sans,Arial,Helvetica,sans-serif);transition:background-color .18s ease;}.ds-header-button{min-height:42px;padding:11px 25px;font-size:14px;background:#3f4c36;white-space:nowrap;}.ds-header-button:hover{background:#4d5a3c;}.ds-header-button:focus-visible{outline:3px solid #a77c36;outline-offset:6px;border-radius:3px;}@media(prefers-reduced-motion:reduce){.ds-header-button{transition:none;}}"
+    },
+    {
+      "name": "Навигация",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Текстовые якорные ссылки на тёмном фоне первого экрана.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"#about\">О шаттле</a><a href=\"#speakers\">Ведущие</a><a href=\"#place\">Место проведения</a><a href=\"#contacts\">Контакты</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:26px;align-items:center;padding:16px;background:var(--forest,#26372c);color:var(--paper,#fbf9f3);font:14px/1.45 var(--sans,Arial,Helvetica,sans-serif);}.ds-nav a{color:inherit;text-decoration:none;white-space:nowrap;text-shadow:0 1px 8px #162219;}.ds-nav a:hover{text-decoration:underline;text-underline-offset:.22em;}.ds-nav a:focus-visible{outline:3px solid #a77c36;outline-offset:6px;border-radius:3px;}"
+    },
+    {
+      "name": "Карточка преимущества",
+      "kind": "card",
+      "refersTo": "benefit-card",
+      "description": "Плоская карточка с линейной иконкой и коротким текстом; без интерактивных состояний.",
+      "html": "<article class=\"ds-benefit\"><span class=\"ds-disc\"><svg class=\"ds-icon\" viewBox=\"0 0 48 48\" aria-hidden=\"true\"><circle cx=\"24\" cy=\"24\" r=\"18\"/><path d=\"m33 15-5 13-13 5 5-13 13-5Zm-13 5 8 8M24 3v5m0 32v5M3 24h5m32 0h5\"/></svg></span><h3>Больше ясности<br>о себе</h3><p>Лучше понять свои ценности, потребности и жизненные выборы.</p></article>",
+      "css": ".ds-benefit{background:var(--paper,#fbf9f3);color:var(--ink,#232720);border-radius:var(--radius,12px);padding:20px 23px;max-width:260px;}.ds-disc{display:flex;align-items:center;justify-content:center;width:72px;height:72px;background:#dcdfce;border-radius:50%;margin-bottom:13px;}.ds-icon{width:48px;height:48px;fill:none;stroke:var(--ink,#232720);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;}.ds-benefit h3{font:400 24px/1.06 var(--serif,Georgia,\"Times New Roman\",serif);letter-spacing:-.025em;min-height:52px;margin:0 0 12px;}.ds-benefit p{font:16px/1.4 var(--sans,Arial,Helvetica,sans-serif);margin:0;}"
+    },
+    {
+      "name": "Раскрытие биографии",
+      "kind": "custom",
+      "description": "Нативный details/summary сохраняет компактность биографий и работает без JavaScript.",
+      "html": "<details class=\"ds-details\"><summary>Профессиональный путь</summary><div class=\"ds-details-body\"><p><strong>2016.</strong> По данным публикации «Триостайл», названа лучшим психотерапевтом Республики Беларусь 2016 года.</p><p><strong>2017.</strong> В интервью от 16 мая представлена как заведующая реабилитационным наркологическим отделением «Исток» и врач высшей квалификационной категории.</p></div></details>",
+      "css": ".ds-details{margin-top:14px;color:var(--ink,#232720);font:14px/1.45 var(--sans,Arial,Helvetica,sans-serif);}.ds-details summary{cursor:pointer;color:#4b5d3c;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;padding-block:6px;}.ds-details summary:focus-visible{outline:3px solid #a77c36;outline-offset:6px;border-radius:3px;}.ds-details-body{padding-block:8px;}.ds-details-body p{margin:0;}.ds-details-body p+p{margin-top:10px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Встреча с собой и другими",
+    "overview": "Спокойная природная атмосфера, тёплые светлые поверхности, лесной пейзаж и выразительные заголовки с засечками. Это документация существующей реализации, а не новая концепция. Визуальный эталон — `../design/approved-latest-sketch.png` (935 × 1683).",
+    "keyCharacteristics": [
+      "Молочные поверхности и приглушённый зелёный цвет.",
+      "Крупные заголовки с засечками и компактный основной текст.",
+      "Атмосферные изображения, живой текст и рукописные подписи.",
+      "Краткие биографии с нативным раскрытием подробностей."
+    ],
+    "rules": [
+      {
+        "name": "The Approved Palette Rule",
+        "body": "Сохранять приглушённую палитру утверждённого эскиза; новые акцентные цвета не вводить.",
+        "section": "colors"
+      },
+      {
+        "name": "The Native Behavior Rule",
+        "body": "Сохранять обычные ссылки, семантические секции, нативное раскрытие биографий и видимый клавиатурный фокус. При `prefers-reduced-motion: reduce` плавная прокрутка и переходы отключены.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do сохранять композицию, палитру и атмосферу утверждённого эскиза.",
+      "Do оставлять текст живым, биографии компактными, а подробности доступными с клавиатуры.",
+      "Do обозначать изображение места как иллюстрацию атмосферы."
+    ],
+    "donts": [
+      "Don't создавать новую визуальную концепцию или подключать внешние шрифты и изображения.",
+      "Don't выдавать кадрирования эскиза за документальные фотографии площадки.",
+      "Don't добавлять формы, модальные окна и клиентский JavaScript."
+    ]
+  }
+}
