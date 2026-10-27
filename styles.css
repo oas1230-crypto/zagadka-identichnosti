@@ -139,7 +139,6 @@ img {
 .hero {
   position:relative;
   isolation:isolate;
-  overflow:hidden;
   background:#30392e;
   color:var(--paper);
 }
@@ -151,6 +150,7 @@ img {
   z-index:-3;
   background:url("assets/hero-forest.webp") left center/50% 100% no-repeat;
   filter:blur(2px);
+  clip-path:inset(0);
   opacity:.55;
 }
 
@@ -200,6 +200,10 @@ img {
 
 .site-header nav a:hover {
   text-decoration:underline;
+}
+
+.mobile-menu {
+  display:none;
 }
 
 .button {
@@ -481,7 +485,10 @@ img {
 }
 
 .portrait-gleb {
+  object-fit:cover;
   object-position:center top;
+  padding-top:8px;
+  background:#a8a8a9;
 }
 
 .speaker h3 {
@@ -737,6 +744,29 @@ img {
 }
 
 @media(max-width:899px) {
+  body {
+    font-size:16px;
+    line-height:1.5;
+  }
+  .site-header nav a {
+    display:inline-flex;
+    align-items:center;
+    min-height:44px;
+  }
+  .speaker summary,.speaker-details a {
+    min-height:44px;
+    padding-block:12px;
+    font-size:16px;
+  }
+  .speaker details {
+    font-size:16px;
+  }
+  .interview-link {
+    min-height:44px;
+    padding-block:10px;
+    align-items:center;
+    font-size:16px;
+  }
   .site-header {
     flex-wrap:wrap;
     padding-block:20px 12px;
@@ -764,6 +794,7 @@ img {
   }
   .hero-scenery {
     left:35%;
+    background-position:left center;
   }
   .hero:after {
     background:linear-gradient(90deg,rgba(28,37,28,.94),rgba(30,38,29,.8) 45%,rgba(25,34,25,.18) 100%);
@@ -855,53 +886,115 @@ img {
   }
 }
 
+@media(min-width:600px) and (max-width:899px) {
+  .process .split-layout {
+    grid-template-columns:1fr;
+  }
+  .process .photo-with-note {
+    grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+    gap:32px;
+    align-items:center;
+  }
+  .process .handwritten {
+    font-size:24px;
+  }
+}
+
+/* Phone: keep the approved visual language, give each piece enough space. */
 @media(max-width:599px) {
   body {
     font-size:16px;
-    line-height:1.5;
+    line-height:1.55;
   }
   .wrap {
-    width:calc(100% - 44px);
+    width:calc(100% - 40px);
   }
   h2 {
-    font-size:36px;
+    font-size:clamp(30px,9.2vw,36px);
     margin-bottom:18px;
-    line-height:1.08;
+    line-height:1.1;
   }
   .site-header {
-    column-gap:10px;
-    padding-top:22px;
+    position:relative;
+    z-index:2;
+    min-height:76px;
+    padding-block:16px 8px;
+    flex-wrap:nowrap;
+    gap:8px;
   }
   .brand {
-    font-size:19px;
+    font-size:clamp(17px,4.75vw,19px);
   }
-  .header-button {
+  .site-header .desktop-nav,.header-button {
     display:none;
   }
-  .site-header nav {
-    gap:8px 19px;
-    flex-wrap:wrap;
-    justify-content:flex-start;
-    font-size:13px;
-    line-height:1.5;
+  .mobile-menu {
+    display:block;
+    flex-shrink:0;
   }
-  .site-header nav a {
-    padding-block:5px;
+  .mobile-menu summary {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-width:76px;
+    min-height:44px;
+    padding:8px;
+    cursor:pointer;
+    list-style:none;
+    font-size:14px;
+    border-radius:8px;
+  }
+  .mobile-menu summary::-webkit-details-marker {
+    display:none;
+  }
+  .mobile-menu summary .icon {
+    width:20px;
+    height:20px;
+  }
+  .mobile-menu[open] summary {
+    background:rgba(255,255,255,.1);
+  }
+  .site-header .mobile-menu nav {
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:4px;
+    width:auto;
+    padding:12px;
+    background:var(--forest);
+    border:1px solid #6b7660;
+    border-radius:12px;
+    box-shadow:0 12px 24px rgba(10,20,12,.25);
+    font-size:14px;
+  }
+  .mobile-menu:not([open]) nav {
+    display:none;
+  }
+  .site-header .mobile-menu nav a {
+    display:flex;
+    align-items:center;
+    min-height:48px;
+    padding:8px;
+    white-space:normal;
+    text-shadow:none;
   }
   .hero-content {
     min-height:0;
-    padding-block:30px 34px;
+    padding-block:22px 236px;
   }
   .eyebrow {
     font-size:11px;
-    letter-spacing:.22em;
-    margin-bottom:15px;
+    letter-spacing:.2em;
+    margin-bottom:14px;
   }
   .hero h1 {
-    font-size:clamp(43px,11.4vw,68px);
-    line-height:.98;
-    letter-spacing:-.035em;
-    margin-bottom:23px;
+    font-size:clamp(36px,11.5vw,68px);
+    line-height:1;
+    margin-bottom:22px;
   }
   .hero-intro {
     font-size:18px;
@@ -912,98 +1005,122 @@ img {
     display:none;
   }
   .hero-scenery {
-    left:0;
-    background-position:left center;
-    opacity:.8;
-    mask-image:none;
+    inset:auto 0 0;
+    height:236px;
+    background-size:auto 100%;
+    background-position:right bottom;
+    opacity:1;
+    mask-image:linear-gradient(90deg,transparent 20%,#000 50%);
   }
   .hero:after {
-    background:linear-gradient(90deg,rgba(26,35,26,.9),rgba(26,35,26,.45));
+    background:linear-gradient(180deg,rgba(28,37,28,.96) 0%,rgba(28,37,28,.96) calc(100% - 236px),rgba(28,37,28,.75) calc(100% - 210px),rgba(28,37,28,0) calc(100% - 130px));
   }
   .event-meta {
     flex-direction:column;
     align-items:flex-start;
-    gap:18px;
-    margin-top:28px;
+    gap:16px;
+    margin-top:24px;
     font-size:15px;
+    line-height:1.4;
   }
   .event-meta .icon {
     width:26px;
     height:26px;
   }
   .hero-button {
-    margin-top:27px;
-    min-height:52px;
+    display:flex;
+    width:100%;
+    margin-top:24px;
+    min-height:54px;
     padding-inline:25px;
     font-size:16px;
   }
   .section {
-    padding-block:34px;
+    padding-block:40px;
   }
   .split-layout,.place-layout {
     grid-template-columns:1fr;
-    gap:24px;
+    gap:26px;
   }
   .photo-with-note {
-    grid-template-columns:minmax(0,1fr) 110px;
+    grid-template-columns:1fr;
     gap:16px;
   }
   .handwritten {
-    font-size:18px;
-    line-height:1.5;
-    margin:0;
+    max-width:290px;
+    margin:0 auto;
+    font-size:23px;
+    line-height:1.4;
+    transform:rotate(-3deg);
   }
   .handwritten br {
-    display:initial;
+    display:none;
   }
   .handwritten:after {
-    width:40px;
+    width:55px;
+    margin-top:12px;
   }
   .room-photo {
-    aspect-ratio:1.25;
+    aspect-ratio:1.69;
   }
   .benefits {
-    padding-block:29px 34px;
+    padding-block:34px 40px;
   }
   .benefit-grid {
-    gap:12px;
+    grid-template-columns:1fr;
+    gap:14px;
   }
   .benefit {
-    padding:18px 14px;
+    display:grid;
+    grid-template-columns:52px minmax(0,1fr);
+    column-gap:16px;
+    row-gap:9px;
+    padding:22px 18px;
+    align-items:start;
   }
   .benefit h3 {
-    font-size:22px;
-    line-height:1.12;
-    margin-bottom:12px;
-    overflow-wrap:break-word;
+    grid-column:2;
+    min-height:0;
+    font-size:23px;
+    line-height:1.15;
+    margin:0;
+    text-wrap:pretty;
+  }
+  .benefit h3 br {
+    display:none;
   }
   .benefit p {
-    font-size:14px;
-    line-height:1.45;
+    grid-column:2;
+    font-size:16px;
+    line-height:1.5;
   }
   .icon-disc {
-    width:54px;
-    height:54px;
-    margin-bottom:15px;
+    grid-column:1;
+    grid-row:1 / 3;
+    width:52px;
+    height:52px;
+    margin:0;
   }
   .benefit-icon {
     width:36px;
     height:36px;
   }
   .intro-note {
-    padding:15px;
-    font-size:14px;
-    gap:11px;
+    padding:18px 16px;
+    font-size:15px;
+    line-height:1.5;
+    gap:12px;
   }
   .conversation-photo {
-    aspect-ratio:1.1;
+    aspect-ratio:1.32;
   }
   .process .photo-with-note {
     margin-top:4px;
   }
   .event-timing {
-    font-size:14px;
-    margin-top:16px;
+    font-size:15px;
+    margin-top:18px;
+    line-height:1.5;
   }
   .section-heading {
     display:block;
@@ -1013,51 +1130,51 @@ img {
     max-width:none;
     font-size:11px;
     padding:0;
-    margin-bottom:23px;
-    letter-spacing:.14em;
+    margin-bottom:25px;
+    letter-spacing:.1em;
   }
   .speakers-grid {
-    gap:34px;
+    gap:36px;
   }
   .speaker {
-    grid-template-columns:115px minmax(0,1fr);
+    grid-template-columns:clamp(112px,34vw,150px) minmax(0,1fr);
     column-gap:18px;
-    row-gap:16px;
+    row-gap:18px;
   }
   .portrait {
-    height:175px;
+    height:auto;
+    aspect-ratio:3 / 4;
     object-position:center 35%;
     border-radius:10px;
   }
   .portrait-gleb {
-    object-position:top;
-  }
-  .speaker h3 {
-    font-size:27px;
-    margin-top:0;
-    line-height:1.07;
-  }
-  .speaker-role {
-    font-size:14px;
-    margin-bottom:0;
+    object-position:center top;
   }
   .speaker-copy {
     display:contents;
   }
-  .speaker h3,.speaker-role {
+  .speaker-intro {
     grid-column:2;
+    align-self:center;
+    min-width:0;
   }
   .speaker h3 {
-    grid-row:auto;
+    font-size:clamp(25px,7vw,29px);
+    margin:0 0 10px;
+    line-height:1.1;
+    text-wrap:initial;
   }
-  .portrait {
-    grid-row:span 2;
+  .speaker-role {
+    font-size:15px;
+    line-height:1.45;
+    margin:0;
   }
   .speaker-copy>p:not(.speaker-role),.speaker details,.interview-link,.interview-caption {
-    grid-column:1/-1;
+    grid-column:1 / -1;
   }
   .speaker-copy>p:not(.speaker-role) {
-    font-size:15px;
+    font-size:16px;
+    line-height:1.55;
     margin:0;
   }
   .speaker details {
@@ -1068,10 +1185,11 @@ img {
   }
   .interview-link {
     margin-top:0;
-    font-size:15px;
+    font-size:16px;
   }
   .interview-caption {
-    margin-top:-10px!important;
+    margin-top:-12px!important;
+    font-size:13px!important;
   }
   .venue-photo {
     aspect-ratio:2.3;
@@ -1080,28 +1198,31 @@ img {
     font-size:11px;
   }
   .contacts {
-    padding-block:30px 36px;
+    padding-block:34px max(36px,env(safe-area-inset-bottom));
   }
   .contact-layout {
-    gap:20px;
+    gap:22px;
   }
   .contacts h2 {
-    font-size:29px;
+    font-size:30px;
   }
   .contacts p {
-    font-size:15px;
+    font-size:16px;
+    line-height:1.5;
   }
   .contact-links {
     gap:14px 24px;
   }
   .phone-link {
-    font-size:26px;
+    font-size:clamp(24px,6.8vw,28px);
     border:0;
     padding:0;
     width:100%;
+    min-height:48px;
   }
   .contact-note {
     margin-top:20px!important;
+    font-size:14px!important;
   }
   .contact-links .icon {
     width:24px;
@@ -1110,32 +1231,104 @@ img {
 }
 
 @media(max-width:359px) {
+  .speaker {
+    column-gap:14px;
+  }
+  .speaker h3 {
+    font-size:24px;
+  }
+  .speaker-role {
+    font-size:14px;
+  }
+  .benefit {
+    grid-template-columns:44px minmax(0,1fr);
+    gap:9px 12px;
+    padding:20px 16px;
+  }
+  .icon-disc {
+    width:44px;
+    height:44px;
+  }
+  .benefit h3 {
+    font-size:21px;
+  }
+}
+
+@media(max-width:899px) and (orientation:landscape) {
   .wrap {
-    width:calc(100% - 36px);
+    width:auto;
+    margin-left:max(24px,env(safe-area-inset-left));
+    margin-right:max(24px,env(safe-area-inset-right));
+  }
+}
+
+@media(pointer:coarse) {
+  .site-header nav a {
+    display:inline-flex;
+    align-items:center;
+  }
+  .site-header nav a,.header-button {
+    min-height:44px;
+  }
+  .speaker summary,.speaker-details a {
+    min-height:44px;
+    padding-block:12px;
+  }
+  .interview-link {
+    min-height:44px;
+    padding-block:10px;
+    align-items:center;
+  }
+}
+
+@media(min-width:900px) and (max-width:1199px) and (pointer:coarse) {
+  body {
+    font-size:16px;
+    line-height:1.5;
   }
   .benefit-grid {
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
   }
-  .benefit h3 br {
-    display:none;
+  .benefit {
+    padding:24px;
+  }
+  .benefit h3 {
+    min-height:0;
+    font-size:24px;
   }
   .benefit p {
     font-size:16px;
   }
+  .speakers-grid {
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+  .speaker {
+    grid-template-columns:190px minmax(0,1fr);
+    gap:24px;
+  }
+  .portrait {
+    height:250px;
+  }
+  .speaker h3 {
+    font-size:32px;
+  }
+  .speaker-role,.speaker-copy>p:not(.speaker-role),.speaker details,.speaker summary,.interview-link {
+    font-size:16px;
+  }
   .photo-with-note {
     grid-template-columns:1fr;
+    gap:16px;
+  }
+  .handwritten {
+    max-width:300px;
+    margin:0 auto;
+    font-size:23px;
+    transform:rotate(-3deg);
   }
   .handwritten br {
     display:none;
-  }
-  .handwritten {
-    font-size:22px;
-  }
-  .speaker {
-    grid-template-columns:100px minmax(0,1fr);
-  }
-  .speaker h3 {
-    font-size:25px;
   }
 }
 
